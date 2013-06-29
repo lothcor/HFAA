@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <title>title</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="lib/jquery-1.6.4.js"></script>
+        <script src="lib/jquery.mobile-1.1.0.js"></script>
+        <link href="src/css/jquery.mobile.structure-1.1.0.css" rel="stylesheet">
+        <link href="src/css/jquery.mobile.theme-1.1.0.css" rel="stylesheet">
+    </head>
+    
+    <body>
+        <div data-role="page" id="page1">
+            <div data-role="header">
+                <h1>HFAA</h1>
+            </div>
+            <div data-role="content">
+                <img src="images/logo.png" style="display: block; margin: 0 auto">
+                <a data-role="button" href="#page2" data-rel="page" data-transition="fade" data-corners="false">Register</a>
+            </div>
+        </div>
+        <div data-role="page" id="page2">
+            <div data-role="header">
+                <h1>Setup</h1>
+            </div>
+            <div data-role="content">
+                <form action="http://" method="POST">
+                    <div data-role="fieldcontain">
+                        <label for="Name">Name</label>
+                        <input type="text" id="Name">
+                    </div>
+                    <div data-role="fieldcontain">
+                        <label for="Number">Number</label>
+                        <input type="text" id="Number">
+                    </div>
+                    <div data-role="fieldcontain">
+                        <label for="Prefix">Prefix</label>
+                        <input type="text" id="Prefix">
+                    </div>
+                    <div data-role="fieldcontain">
+                        <label for="Email">Email</label>
+                        <input type="text" id="Email">
+                    </div>
+                    <input type="checkbox" id="paperless">
+                    <label for="paperless">Paperless Report?</label>
+                </form>
+                <ul data-role="listview" data-inset="true">
+                    <li id="fields">
+                        <a href="#page3">Field Defaults</a>
+                    </li>
+                    <li>
+                        <a href="#page4">Bull Team</a>
+                    </li>
+                </ul>
+                <a data-role="button" href="#page5">Save</a>
+            </div>
+        </div>
+        <div data-role="dialog" id="page3">
+            <div data-role="header">
+                <h1>Field Defaults</h1>
+            </div>
+            <div data-role="content">
+                <form action="http://" method="POST">
+                    <fieldset data-role="controlgroup">
+                        <legend></legend>
+                        <input type="checkbox" id="checkbox1">
+                        <label for="checkbox1">Photo</label>
+                        <input type="checkbox" id="checkbox2">
+                        <label for="checkbox2">Number</label>
+                        <input type="checkbox" id="checkbox4">
+                        <label for="checkbox4">Checkbox</label>
+                        <input type="checkbox" id="checkbox5">
+                        <label for="checkbox5">Checkbox</label>
+                        <input type="checkbox" id="checkbox3">
+                        <label for="checkbox3">Name</label>
+                    </fieldset>
+                    <a data-role="button" data-rel="back">Save</a>
+                </form>
+            </div>
+        </div>
+        <div data-role="dialog" id="page4">
+            <div data-role="header">
+                <h1>Bull Team</h1>
+            </div>
+            <div data-role="content">
+                <form action="http://" method="POST">
+                    <div data-role="fieldcontain">
+                        <label for="text1">Search</label>
+                        <input type="text" id="text1">
+                    </div>
+                    <fieldset data-role="controlgroup">
+                        <legend></legend>
+                        <input type="checkbox" id="checkbox6">
+                        <label for="checkbox6">DONANTE</label>
+                        <input type="checkbox" id="checkbox7">
+                        <label for="checkbox7">ASCONA</label>
+                        <input type="checkbox" id="checkbox8">
+                        <label for="checkbox8">BOSGANNON</label>
+                    </fieldset>
+                    <a data-role="button" data-rel="back">Save</a>
+                </form>
+            </div>
+        </div>
+        <div data-role="page" id="page5">
+            <div data-role="header">
+                <h1>Menu</h1>
+            </div>
+            <div data-role="content">
+                <ul data-role="listview" data-inset="true">
+                    <li>
+                        <a href="#page6">Register Animal</a>
+                    </li>
+                    <li>
+                        <a href="#page4">Bull Team</a>
+                    </li>
+                    <li>
+                        <a href="#page2">Setup</a>
+                    </li>
+                    <li>
+                        <a>Cows</a>
+                    </li>
+                    <li>
+                        <a href="#page7">Status</a>
+                    </li>
+                    <li>
+                        <a href="#page10">Gallery</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div data-role="page" id="page6">
+            <div data-role="header">
+                <h1>Animal Registration</h1>
+                <a data-role="button" href="#page5" data-icon="arrow-l">Back</a>
+            </div>
+            <div data-role="content">
+                <form action="http://" method="POST">
+                    <div class="ui-grid-a">
+                        <div class="ui-block-a">
+                            <a data-role="button">Take Photo</a>
+                        </div>
+                        <div class="ui-block-b">
+                            <a data-role="button">Choose Photo</a>
+                        </div>
+                    </div>
+                    <div data-role="fieldcontain">
+                        <label for="RegName">Name</label>
+                        <input type="text" id="RegName">
+                    </div>
+                    <div data-role="fieldcontain">
+                        <label for="Sire">Sire</label>
+                        <input type="text" id="Sire">
+                    </div>
+                    <div data-role="fieldcontain">
+                        <label for="HIONo">HR No</label>
+                        <input type="text" id="HIONo">
+                    </div>
+                    <a data-role="button" href="#page5">SAVE</a>
+                </form>
+            </div>
+        </div>
+        <div data-role="page" id="page7">
+            <div data-role="header">
+                <h1>Status</h1>
+                <a data-role="button" href="#page5" data-icon="arrow-l">Back</a>
+            </div>
+            <div data-role="content">
+                <ul data-role="listview" data-inset="true">
+                    <li>
+                        <a href="#page8">Complete<span class="ui-li-count">25</span></a>
+                    </li>
+                    <li>
+                        <a href="#page9">Incomplete<span class="ui-li-count">2</span></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div data-role="page" id="page8">
+            <div data-role="header">
+                <h1>Complete</h1>
+                <a data-role="button" href="#page7" data-icon="arrow-l">Back</a>
+            </div>
+            <div data-role="content">
+                <ul data-role="listview" data-inset="true">
+                    <li>123 - SomeName - Prefix</li>
+                    <li>124 - SomeName - Prefix</li>
+                    <li>125 - SomeName - Prefix</li>
+                    <li>126 - SomeName - Prefix</li>
+                    <li>127 - SomeName - Prefix</li>
+                    <li>128 - SomeName - Prefix</li>
+                    <li>129 - SomeName - Prefix</li>
+                    <li>130 - SomeName - Prefix</li>
+                </ul>
+            </div>
+        </div>
+        <div data-role="page" id="page9">
+            <div data-role="header">
+                <h1>InComplete</h1>
+                <a data-role="button" href="#page7" data-icon="arrow-l">Back</a>
+            </div>
+            <div data-role="content">
+                <ul data-role="listview" data-inset="true">
+                    <li>
+                        <a>220 - Name - Prefix </a>
+                    </li>
+                    <li>
+                        <a>225 - Name - Prefix </a>
+                    </li>
+                    <li>
+                        <a>230 - Name - Prefix </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div data-role="page" id="page10">
+            <div data-role="header">
+                <h1>Gallery</h1>
+                <a data-role="button" href="#page5" data-icon="arrow-l">Back</a>
+            </div>
+            <div data-role="content">
+                <img src="">
+                <img src="">
+                <img src="">
+                <img src="">
+                <img src="">
+                <img src="">
+                <img src="">
+                <img src="">
+                <img src="">
+                <img src="">
+                <img src="">
+                <img src="">
+            </div>
+        </div>
+    </body>
+
+</html>
